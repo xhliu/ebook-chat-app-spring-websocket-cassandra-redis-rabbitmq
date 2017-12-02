@@ -5,7 +5,6 @@ import br.com.jorgeacetozi.ebookChat.utils.SystemUsers;
 public class InstantMessageBuilder {
 	
 	private InstantMessage instantMessage;
-	private InstantMessageChatRoom instantMessageChatRoom;
 	private InstantMessageType instantMessageType;
 	private InstantMessageText instantMessageText;
 	private InstantMessageFromUser instantMessageFromUser;
@@ -13,20 +12,6 @@ public class InstantMessageBuilder {
 	
 	public InstantMessageBuilder() {
 		
-	}
-	
-	public InstantMessageChatRoom newMessage() {
-		instantMessage = new InstantMessage();
-		instantMessageChatRoom = new InstantMessageChatRoom();
-		return instantMessageChatRoom;
-	}
-	
-	public class InstantMessageChatRoom {
-		public InstantMessageType withChatRoomId(String chatRoomId) {
-			instantMessage.setChatRoomId(chatRoomId);
-			instantMessageType = new InstantMessageType();
-			return instantMessageType;
-		}
 	}
 	
 	public class InstantMessageType {

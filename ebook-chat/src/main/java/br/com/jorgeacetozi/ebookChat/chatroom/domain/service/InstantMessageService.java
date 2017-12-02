@@ -7,5 +7,5 @@ import br.com.jorgeacetozi.ebookChat.chatroom.domain.model.InstantMessage;
 public interface InstantMessageService {
 	
 	void appendInstantMessageToConversations(InstantMessage instantMessage);
-	List<InstantMessage> findAllInstantMessagesFor(String username, String chatRoomId);
+	List<InstantMessage> findAllInstantMessagesFor(String username, String toUser);
 }

@@ -7,7 +7,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/ebook_chat
     username: root
-    password: root
+    password: btcloveotc
     testWhileIdle: true
     validationQuery: SELECT 1
   jpa:
@@ -49,7 +49,7 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/ebook_chat
     username: root
-    password: root
+    password: btcloveotc
     testWhileIdle: true
     validationQuery: SELECT 1
   jpa:

@@ -19,19 +19,19 @@ public class WebSocketEvents {
 	@EventListener
 	private void handleSessionConnected(SessionConnectEvent event) {
 		SimpMessageHeaderAccessor headers = SimpMessageHeaderAccessor.wrap(event.getMessage());
-		String chatRoomId = headers.getNativeHeader("chatRoomId").get(0);
-		headers.getSessionAttributes().put("chatRoomId", chatRoomId);
-		ChatRoomUser joiningUser = new ChatRoomUser(event.getUser().getName());
-		
-		chatRoomService.join(joiningUser, chatRoomService.findById(chatRoomId));
+		String toUser = headers.getNativeHeader("toUser").get(0);
+		headers.getSessionAttributes().put("toUser", toUser);
+//		ChatRoomUser joiningUser = new ChatRoomUser(event.getUser().getName());
+//
+//		chatRoomService.join(joiningUser, chatRoomService.findById(chatRoomId));
 	}
 
 	@EventListener
 	private void handleSessionDisconnect(SessionDisconnectEvent event) {
-		SimpMessageHeaderAccessor headers = SimpMessageHeaderAccessor.wrap(event.getMessage());
-		String chatRoomId = headers.getSessionAttributes().get("chatRoomId").toString();
-		ChatRoomUser leavingUser = new ChatRoomUser(event.getUser().getName());
-
-		chatRoomService.leave(leavingUser, chatRoomService.findById(chatRoomId));
+//		SimpMessageHeaderAccessor headers = SimpMessageHeaderAccessor.wrap(event.getMessage());
+//		String chatRoomId = headers.getSessionAttributes().get("chatRoomId").toString();
+//		ChatRoomUser leavingUser = new ChatRoomUser(event.getUser().getName());
+//
+//		chatRoomService.leave(leavingUser, chatRoomService.findById(chatRoomId));
 	}
 }

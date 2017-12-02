@@ -34,13 +34,11 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
         cluster.setStartupScripts(Arrays.asList(
         		"USE ebook_chat",
         		"CREATE TABLE IF NOT EXISTS messages (" +
-					"username text," +
-					"chatRoomId text," +
+                    "fromUser text," +
+                    "toUser text," +
 					"date timestamp," +
-					"fromUser text," +
-					"toUser text," +
 					"text text," +
-					"PRIMARY KEY ((username, chatRoomId), date)" +
+					"PRIMARY KEY ((fromUser, toUser), date)" +
 				") WITH CLUSTERING ORDER BY (date ASC)"
         		)
         );

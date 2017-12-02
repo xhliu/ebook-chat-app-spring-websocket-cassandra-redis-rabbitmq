@@ -12,7 +12,6 @@ public interface ChatRoomService {
 	ChatRoom findById(String chatRoomId);
 	ChatRoom join(ChatRoomUser joiningUser, ChatRoom chatRoom);
 	ChatRoom leave(ChatRoomUser leavingUser, ChatRoom chatRoom);
-	void sendPublicMessage(InstantMessage instantMessage);
 	void sendPrivateMessage(InstantMessage instantMessage);
 	List<ChatRoom> findAll();
 }

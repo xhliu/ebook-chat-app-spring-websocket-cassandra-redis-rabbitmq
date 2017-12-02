@@ -1,0 +1,200 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	0	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+head	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<head>$/;"	function	line:5
+meta	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^    <meta http-equiv="Content-Type" content="text\/html; charset=UTF-8"\/>$/;"	function	line:6
+meta	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"\/>$/;"	function	line:7
+title	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^    <title>Jorge Acetozi - Ebook Chat App<\/title>$/;"	function	line:8
+link	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	<link rel="stylesheet" href="\/webjars\/bootstrap\/3.3.7\/css\/bootstrap.min.css" media="screen,projection" \/>$/;"	function	line:10
+body	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<body>$/;"	function	line:12
+nav	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<nav class="navbar navbar-default navbar-fixed-top">$/;"	function	line:15
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^  <div class="container">$/;"	function	line:16
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^    <div class="navbar-header">$/;"	function	line:17
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">$/;"	function	line:18
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <span class="sr-only">Toggle navigation<\/span>$/;"	function	line:19
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:20
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:21
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:22
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^      <a class="navbar-brand" href="#">Ebook Chat App<\/a>$/;"	function	line:24
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	function	line:26
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^      <ul class="nav navbar-nav navbar-right" sec:authorize="isAuthenticated()">$/;"	function	line:27
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <li class="dropdown">$/;"	function	line:28
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="#{menu.language}">Language<\/a>$/;"	function	line:29
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          <ul class="dropdown-menu">$/;"	function	line:30
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          	<li><a id="english" href="?lang=en" th:text="#{menu.language.english}">English<\/a><\/li>$/;"	function	line:31
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^            <li><a id="portuguese" href="?lang=pt" th:text="#{menu.language.portuguese}">Portuguese<\/a><\/li>$/;"	function	line:32
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^        <li class="dropdown" sec:authorize="isAuthenticated()">$/;"	function	line:36
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span sec:authentication="name"><\/span><\/a>$/;"	function	line:37
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          <ul class="dropdown-menu">$/;"	function	line:38
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^          	<li><a id="disconnect" href="#" th:text="#{menu.leave.chatroom}">Logout<\/a><\/li>$/;"	function	line:39
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<div class="container" style="margin-top: 70px;">$/;"	function	line:47
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	<h3 class="text-center" th:text="|#{chatroom.title}: ${chatRoom.name}|">Awesome Chat Room<\/h3>$/;"	function	line:48
+hr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	<hr \/>$/;"	function	line:49
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	<div class="row">$/;"	function	line:50
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^		<div class="col-lg-3 col-sm-3">$/;"	function	line:51
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^			<div class="panel panel-default">$/;"	function	line:52
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<div class="panel-heading">$/;"	function	line:53
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^					<h1 class="panel-title" th:text="#{chatroom.users}">Users<\/h1>$/;"	function	line:54
+table	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^					<table class="table table-hover">$/;"	function	line:58
+tbody	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^						<tbody>$/;"	function	line:59
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<div class="panel-footer">$/;"	function	line:65
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^					<button id="public" type="button" class="btn btn-success" th:text="#{chatroom.public.messages}">I want to send public messages<\/button>$/;"	function	line:66
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^		<div class="col-lg-9 col-sm-9">$/;"	function	line:71
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^			<div class="panel panel-default">$/;"	function	line:72
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<div id="newMessages" class="panel-body" style="height: 435px; overflow-y: scroll;">$/;"	function	line:73
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^		<div class="col-lg-12 col-sm-6">$/;"	function	line:78
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^			<div class="input-group input-group-lg">$/;"	function	line:79
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<span class="input-group-addon" id="sendTo">public<\/span> $/;"	function	line:80
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<input id="message" type="text" class="form-control" aria-describedby="sendTo" th:placeholder="#{chatroom.message.placeholder}" \/> $/;"	function	line:81
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^				<span class="input-group-btn">$/;"	function	line:82
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^					<button id="send" class="btn btn-default" type="button" th:text="#{chatroom.send}">Send<\/button>$/;"	function	line:83
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script src="\/webjars\/jquery\/3.1.1\/jquery.min.js"><\/script>$/;"	function	line:90
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script src="\/webjars\/bootstrap\/3.3.7\/js\/bootstrap.min.js"><\/script>$/;"	function	line:91
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script src="\/webjars\/sockjs-client\/1.1.2\/sockjs.min.js"><\/script>$/;"	function	line:92
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script src="\/webjars\/stomp-websocket\/2.3.4\/lib\/stomp.min.js"><\/script>$/;"	function	line:93
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script src="\/webjars\/noty\/2.2.4\/jquery.noty.packaged.min.js"><\/script>$/;"	function	line:94
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^<script th:inline="javascript">$/;"	function	line:96
+connect	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function connect() {$/;"	function	line:109
+stompSuccess	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function stompSuccess(frame) {$/;"	function	line:115
+stompFailure	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function stompFailure(error) {$/;"	function	line:127
+disconnect	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function disconnect() {$/;"	function	line:133
+updateConnectedUsers	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function updateConnectedUsers(response) {$/;"	function	line:140
+oldMessages	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function oldMessages(response) {$/;"	function	line:157
+publicMessages	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function publicMessages(message) {$/;"	function	line:171
+appendPublicMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function appendPublicMessage(instantMessage) {$/;"	function	line:177
+privateMessages	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function privateMessages(message) {$/;"	function	line:188
+appendPrivateMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function appendPrivateMessage(instantMessage) {$/;"	function	line:194
+sendMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function sendMessage() {$/;"	function	line:203
+inputMessageIsEmpty	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function inputMessageIsEmpty() {$/;"	function	line:225
+sendTo	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function sendTo(e) {$/;"	function	line:229
+checkEnter	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function checkEnter(e) {$/;"	function	line:234
+scrollDownMessagesPanel	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function scrollDownMessagesPanel() {$/;"	function	line:242
+bindConnectedUsers	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function bindConnectedUsers() {$/;"	function	line:246
+enableInputMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function enableInputMessage() {$/;"	function	line:250
+disableInputMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function disableInputMessage() {$/;"	function	line:254
+successMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function successMessage(msg){$/;"	function	line:258
+errorMessage	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chatroom.html	/^	function errorMessage(msg){$/;"	function	line:267
+head	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<head>$/;"	function	line:5
+meta	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <meta http-equiv="Content-Type" content="text\/html; charset=UTF-8"\/>$/;"	function	line:6
+meta	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"\/>$/;"	function	line:7
+title	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <title>Jorge Acetozi - Ebook Chat App<\/title>$/;"	function	line:8
+link	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^	<link rel="stylesheet" href="\/webjars\/bootstrap\/3.3.7\/css\/bootstrap.min.css" media="screen,projection" \/>$/;"	function	line:10
+body	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<body>$/;"	function	line:12
+nav	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<nav class="navbar navbar-default navbar-fixed-top">$/;"	function	line:15
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^  <div class="container">$/;"	function	line:16
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <div class="navbar-header">$/;"	function	line:17
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">$/;"	function	line:18
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <span class="sr-only">Toggle navigation<\/span>$/;"	function	line:19
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:20
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:21
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <span class="icon-bar"><\/span>$/;"	function	line:22
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^      <a class="navbar-brand" href="#">Jorge Acetozi - Ebook Chat App<\/a>$/;"	function	line:24
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <div id="navbar" class="navbar-collapse collapse">$/;"	function	line:26
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^      <ul class="nav navbar-nav" sec:authorize="isAuthenticated()">$/;"	function	line:27
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <li class="active"><a href="\/chat" th:text="#{menu.chatrooms}">Chat Rooms<\/a><\/li>$/;"	function	line:28
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^      <ul class="nav navbar-nav navbar-right">$/;"	function	line:30
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <li class="dropdown">$/;"	function	line:31
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" th:text="#{menu.language}">Language<\/a>$/;"	function	line:32
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          <ul class="dropdown-menu">$/;"	function	line:33
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          	<li><a id="english" href="?lang=en" th:text="#{menu.language.english}">English<\/a><\/li>$/;"	function	line:34
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^            <li><a id="portuguese" href="?lang=pt" th:text="#{menu.language.portuguese}">Portuguese<\/a><\/li>$/;"	function	line:35
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^        <li class="dropdown" sec:authorize="isAuthenticated()">$/;"	function	line:38
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span sec:authentication="name"><\/span><\/a>$/;"	function	line:39
+ul	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          <ul class="dropdown-menu">$/;"	function	line:40
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          	<li><a id="newChatRoom" href="#" data-toggle="modal" data-target="#newChatRoomModal"  th:text="#{menu.new.chatrooms}" sec:authorize="hasRole('ROLE_ADMIN')">New Chat Room<\/a><\/li>$/;"	function	line:41
+li	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^          	<li><a href="\/logout" th:text="#{menu.logout}">Logout<\/a><\/li>$/;"	function	line:42
+section	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<section layout:fragment="content">$/;"	function	line:50
+p	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^    <p>Page content here<\/p>$/;"	function	line:51
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<script src="\/webjars\/jquery\/3.1.1\/jquery.min.js"><\/script>$/;"	function	line:54
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<script src="\/webjars\/bootstrap\/3.3.7\/js\/bootstrap.min.js"><\/script>$/;"	function	line:55
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/layout/default.html	/^<script type="text\/javascript" layout:fragment="script">$/;"	function	line:56
+head	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^<head>$/;"	function	line:5
+body	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^<body>$/;"	function	line:7
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^<div layout:fragment="content">$/;"	function	line:8
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^    <div class="container">$/;"	function	line:10
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^  		<h3 th:text="#{login.title}">Login<\/h3>$/;"	function	line:11
+hr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^  		<hr \/>$/;"	function	line:12
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^  		<div id="errorMessage" th:if="${param.error}">$/;"	function	line:13
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^        	<h4 class="alert alert-danger" th:text="#{login.badCredentials}"><\/h4>$/;"	function	line:14
+form	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		<form class="form-horizontal" method="post" action="\/login">$/;"	function	line:16
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		<div class="form-group">$/;"	function	line:17
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		    <label for="username" class="col-sm-2 control-label" th:text="#{login.username}">Username<\/label>$/;"	function	line:18
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		    <div class="col-sm-5">$/;"	function	line:19
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		        <input type="text" id="username" name="username" class="form-control" th:placeholder="#{login.your.username}" \/>$/;"	function	line:20
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		<div class="form-group">$/;"	function	line:23
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		    <label for="password" class="col-sm-2 control-label" th:text="#{login.password}">Password<\/label>$/;"	function	line:24
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		    <div class="col-sm-5">$/;"	function	line:25
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		        <input type="password" class="form-control" id="password" name="password" th:placeholder="#{login.your.password}"\/>$/;"	function	line:26
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		<div class="form-group">$/;"	function	line:29
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		    <div class="col-sm-offset-2 col-sm-4">$/;"	function	line:30
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		      <button type="submit" class="btn btn-default" th:text="#{login.signin}">Sign In<\/button>$/;"	function	line:31
+a	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/login.html	/^		      <a href="\/new-account" th:text="#{login.create.account}">Or create an account<\/a>$/;"	function	line:32
+head	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^<head>$/;"	function	line:5
+body	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^<body>$/;"	function	line:7
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^<div layout:fragment="content">$/;"	function	line:8
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^    <div class="container">	$/;"	function	line:10
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<h3 th:text="#{new.account.title}">New Account<\/h3>$/;"	function	line:11
+hr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<hr \/>$/;"	function	line:12
+form	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<form class="form-horizontal" method="post" th:action="@{\/new-account}" th:object="${user}">$/;"	function	line:13
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<div class="form-group">$/;"	function	line:14
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <label for="name" class="col-sm-2 control-label" th:text="#{new.account.name}">Name<\/label>$/;"	function	line:15
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <div class="col-sm-5">$/;"	function	line:16
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <input th:field="${user.name}" type="text" id="name" class="form-control" th:placeholder="#{new.account.your.name}" \/>$/;"	function	line:17
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <div th:errors="*{name}" class="alert alert-danger">Error<\/div>$/;"	function	line:18
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<div class="form-group">$/;"	function	line:21
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <label for="email" class="col-sm-2 control-label" th:text="#{new.account.email}">Email<\/label>$/;"	function	line:22
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <div class="col-sm-5">$/;"	function	line:23
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <input th:field="${user.email}" type="text" id="email" name="email" class="form-control" th:placeholder="#{new.account.your.email}" \/>$/;"	function	line:24
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <div th:errors="*{email}" class="alert alert-danger">Error<\/div>$/;"	function	line:25
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<div class="form-group">$/;"	function	line:28
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <label for="username" class="col-sm-2 control-label" th:text="#{new.account.username}">Username<\/label>$/;"	function	line:29
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <div class="col-sm-5">$/;"	function	line:30
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <input th:field="${user.username}" type="text" id="username" name="username" class="form-control" th:placeholder="#{new.account.your.username}" \/>$/;"	function	line:31
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <div th:errors="*{username}" class="alert alert-danger">Error<\/div>$/;"	function	line:32
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<div class="form-group">$/;"	function	line:35
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <label for="password" class="col-sm-2 control-label" th:text="#{new.account.password}">Password<\/label>$/;"	function	line:36
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <div class="col-sm-5">$/;"	function	line:37
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <input th:field="${user.password}" type="password" class="form-control" id="password" name="password" th:placeholder="#{new.account.your.password}"\/>$/;"	function	line:38
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		        <div th:errors="*{password}" class="alert alert-danger">Error<\/div>$/;"	function	line:39
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		<div class="form-group">$/;"	function	line:42
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		    <div class="col-sm-offset-2 col-sm-4">$/;"	function	line:43
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/new-account.html	/^		      <button type="submit" class="btn btn-default" th:text="#{new.account.create}">Create<\/button>$/;"	function	line:44
+head	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^<head>$/;"	function	line:5
+body	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^<body>$/;"	function	line:7
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^	<div class="container" layout:fragment="content">$/;"	function	line:8
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^		<h3 class="text-center" th:text="#{chat.available.chatrooms}">Available Chat Rooms<\/h3>$/;"	function	line:10
+hr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^		<hr \/>$/;"	function	line:11
+table	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^		<table class="table table-striped">$/;"	function	line:12
+thead	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^			<thead>$/;"	function	line:13
+tr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^				<tr>$/;"	function	line:14
+th	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<th th:text="#{chat.chatrooms.name}">Name<\/th>$/;"	function	line:15
+th	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<th th:text="#{chat.chatrooms.description}">Description<\/th>$/;"	function	line:16
+th	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<th th:text="#{chat.chatrooms.connectedUsers}">Connected Users<\/th>$/;"	function	line:17
+th	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<th><\/th>$/;"	function	line:18
+tbody	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^			<tbody>$/;"	function	line:22
+tr	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^				<tr th:each="chatRoom : ${chatRooms}">$/;"	function	line:23
+td	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<td th:text="${chatRoom.name}">Brazil<\/td>$/;"	function	line:24
+td	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<td th:text="${chatRoom.description}">Meet brazilian people$/;"	function	line:25
+td	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<td th:text="${#lists.size(chatRoom.connectedUsers)}">0<\/td>$/;"	function	line:27
+td	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<td><a th:href="|\/chatroom\/${chatRoom.id}|" th:text="#{chat.chatrooms.join}">Join<\/a><\/td>$/;"	function	line:28
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^			<div class="modal-dialog" role="document">$/;"	function	line:35
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^				<div class="modal-content">$/;"	function	line:36
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<div class="modal-header">$/;"	function	line:37
+span	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^							<span aria-hidden="true">&times;<\/span>$/;"	function	line:40
+h	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^						<h4 class="modal-title" id="newChatRoomModalLabel" th:text="#{chat.new.chatroom.title}">New Chat Room<\/h4>$/;"	function	line:42
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<div class="modal-body">$/;"	function	line:44
+form	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^						<form>$/;"	function	line:45
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^							<div class="form-group">$/;"	function	line:46
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^								<label for="newChatroomName" class="control-label" th:text="#{chat.new.chatroom.name}">Name<\/label>$/;"	function	line:47
+input	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^								<input type="text" class="form-control" id="newChatroomName" \/>$/;"	function	line:48
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^							<div class="form-group">$/;"	function	line:50
+label	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^								<label for="newChatRoomDescription" class="control-label" th:text="#{chat.new.chatroom.description}">Description<\/label>$/;"	function	line:51
+textarea	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^								<textarea class="form-control" id="newChatRoomDescription"><\/textarea>$/;"	function	line:52
+div	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^					<div class="modal-footer">$/;"	function	line:56
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^						<button type="button" class="btn btn-default" data-dismiss="modal" th:text="#{chat.new.chatroom.close}">Close<\/button>$/;"	function	line:57
+button	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^						<button id="btnCreateNewChatRoom" type="button"	class="btn btn-primary" th:text="#{chat.new.chatroom.create}">Create<\/button>$/;"	function	line:58
+script	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^	<script layout:fragment="script">$/;"	function	line:66
+createNewChatRoom	/Users/xhliu/Dropbox/projects/web_chat/ebook-chat/src/main/resources/templates/chat.html	/^			function createNewChatRoom() {$/;"	function	line:74

@@ -1,7 +1,9 @@
 package br.com.jorgeacetozi.ebookChat.chatroom.api;
 
 import java.security.Principal;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -42,37 +44,26 @@ public class ChatRoomController {
 		return chatRoomService.save(chatRoom);
 	}
 
-	@RequestMapping("/chatroom/{chatRoomId}")
-	public ModelAndView join(@PathVariable String chatRoomId, Principal principal) {
-		ModelAndView modelAndView = new ModelAndView("chatroom");
-		modelAndView.addObject("chatRoom", chatRoomService.findById(chatRoomId));
+	@RequestMapping("/chatroom/{toUser}")
+	public ModelAndView join(@PathVariable String toUser, Principal principal) {
+		ModelAndView modelAndView = new ModelAndView("chatp2p");
+		modelAndView.addObject("toUser", toUser);
 		return modelAndView;
-	}
-
-	@SubscribeMapping("/connected.users")
-	public List<ChatRoomUser> listChatRoomConnectedUsersOnSubscribe(SimpMessageHeaderAccessor headerAccessor) {
-		String chatRoomId = headerAccessor.getSessionAttributes().get("chatRoomId").toString();
-		return chatRoomService.findById(chatRoomId).getConnectedUsers();
 	}
 
 	@SubscribeMapping("/old.messages")
 	public List<InstantMessage> listOldMessagesFromUserOnSubscribe(Principal principal,
 			SimpMessageHeaderAccessor headerAccessor) {
-		String chatRoomId = headerAccessor.getSessionAttributes().get("chatRoomId").toString();
-		return instantMessageService.findAllInstantMessagesFor(principal.getName(), chatRoomId);
+		String toUser = headerAccessor.getSessionAttributes().get("toUser").toString();
+		return instantMessageService.findAllInstantMessagesFor(principal.getName(), toUser);
 	}
 
 	@MessageMapping("/send.message")
 	public void sendMessage(@Payload InstantMessage instantMessage, Principal principal,
 			SimpMessageHeaderAccessor headerAccessor) {
-		String chatRoomId = headerAccessor.getSessionAttributes().get("chatRoomId").toString();
+		String toUser = headerAccessor.getSessionAttributes().get("toUser").toString();
+		instantMessage.setToUser(toUser);
 		instantMessage.setFromUser(principal.getName());
-		instantMessage.setChatRoomId(chatRoomId);
-
-		if (instantMessage.isPublic()) {
-			chatRoomService.sendPublicMessage(instantMessage);
-		} else {
-			chatRoomService.sendPrivateMessage(instantMessage);
-		}
+		chatRoomService.sendPrivateMessage(instantMessage);
 	}
 }

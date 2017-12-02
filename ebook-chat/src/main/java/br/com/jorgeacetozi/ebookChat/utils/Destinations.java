@@ -8,8 +8,8 @@ public class Destinations {
 			return "/topic/" + chatRoomId + ".public.messages";
 		}
 		
-		public static String privateMessages(String chatRoomId) {
-			return "/queue/" + chatRoomId + ".private.messages";
+		public static String privateMessages() {
+			return "/queue/private.messages";
 		}
 		
 		public static String connectedUsers(String chatRoomId) {
