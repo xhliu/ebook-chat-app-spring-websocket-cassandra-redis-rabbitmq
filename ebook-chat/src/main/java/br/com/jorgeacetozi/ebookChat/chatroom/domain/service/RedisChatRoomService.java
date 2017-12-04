@@ -1,6 +1,7 @@
 package br.com.jorgeacetozi.ebookChat.chatroom.domain.service;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,9 @@ public class RedisChatRoomService implements ChatRoomService {
 
 	@Autowired
 	private ChatRoomRepository chatRoomRepository;
+
+	@Autowired
+	private PendingIMService pendingIMService;
 
 	@Autowired
 	private InstantMessageService instantMessageService;
@@ -48,17 +52,22 @@ public class RedisChatRoomService implements ChatRoomService {
 
 	@Override
 	public void sendPrivateMessage(InstantMessage instantMessage) {
+		String toUser = instantMessage.getToUser();
+		String fromUser = instantMessage.getFromUser();
+
 		webSocketMessagingTemplate.convertAndSendToUser(
-				instantMessage.getToUser(),
+				toUser,
 				Destinations.ChatRoom.privateMessages(),
 				instantMessage);
 		
 		webSocketMessagingTemplate.convertAndSendToUser(
-				instantMessage.getFromUser(),
+				fromUser,
 				Destinations.ChatRoom.privateMessages(),
 				instantMessage);
 
 		instantMessageService.appendInstantMessageToConversations(instantMessage);
+
+		pendingIMService.add(toUser, fromUser);
 	}
 
 	@Override

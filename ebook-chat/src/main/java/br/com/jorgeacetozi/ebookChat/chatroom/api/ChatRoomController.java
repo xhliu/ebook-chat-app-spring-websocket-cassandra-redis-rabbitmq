@@ -1,10 +1,9 @@
 package br.com.jorgeacetozi.ebookChat.chatroom.api;
 
 import java.security.Principal;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
+import br.com.jorgeacetozi.ebookChat.chatroom.domain.service.PendingIMService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -22,7 +21,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
 
 import br.com.jorgeacetozi.ebookChat.chatroom.domain.model.ChatRoom;
-import br.com.jorgeacetozi.ebookChat.chatroom.domain.model.ChatRoomUser;
 import br.com.jorgeacetozi.ebookChat.chatroom.domain.model.InstantMessage;
 import br.com.jorgeacetozi.ebookChat.chatroom.domain.service.ChatRoomService;
 import br.com.jorgeacetozi.ebookChat.chatroom.domain.service.InstantMessageService;
@@ -36,6 +34,9 @@ public class ChatRoomController {
 	@Autowired
 	private InstantMessageService instantMessageService;
 
+	@Autowired
+	private PendingIMService pendingIMService;
+
 	@Secured("ROLE_ADMIN")
 	@RequestMapping(path = "/chatroom", method = RequestMethod.POST)
 	@ResponseBody
@@ -48,6 +49,9 @@ public class ChatRoomController {
 	public ModelAndView join(@PathVariable String toUser, Principal principal) {
 		ModelAndView modelAndView = new ModelAndView("chatp2p");
 		modelAndView.addObject("toUser", toUser);
+		// pending messages read
+		// NOTE: messaging is bidirectional
+		pendingIMService.remove(principal.getName(), toUser);
 		return modelAndView;
 	}
 
@@ -65,5 +69,15 @@ public class ChatRoomController {
 		instantMessage.setToUser(toUser);
 		instantMessage.setFromUser(principal.getName());
 		chatRoomService.sendPrivateMessage(instantMessage);
+	}
+
+	@SubscribeMapping("/old.pending.messages")
+	public Set<String> listPendingMessagesFromUserOnSubscribe(Principal principal) {
+		return pendingIMService.find(principal.getName());
+	}
+
+	@MessageMapping("/reset.pending.messages")
+	public void resetPendingMessagesFromUserOnSubscribe(Principal principal) {
+		pendingIMService.removeAll(principal.getName());
 	}
 }

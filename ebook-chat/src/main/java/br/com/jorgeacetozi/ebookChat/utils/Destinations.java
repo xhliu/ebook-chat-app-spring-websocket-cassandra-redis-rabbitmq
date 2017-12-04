@@ -11,6 +11,10 @@ public class Destinations {
 		public static String privateMessages() {
 			return "/queue/private.messages";
 		}
+
+		public static String pendingMessages() {
+			return "/queue/pending.messages";
+		}
 		
 		public static String connectedUsers(String chatRoomId) {
 			return "/topic/" + chatRoomId + ".connected.users";

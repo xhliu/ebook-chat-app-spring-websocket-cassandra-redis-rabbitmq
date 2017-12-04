@@ -1,29 +1,25 @@
 package br.com.jorgeacetozi.ebookChat.chatroom.websocket;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.messaging.SessionConnectEvent;
 import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 
-import br.com.jorgeacetozi.ebookChat.chatroom.domain.model.ChatRoomUser;
-import br.com.jorgeacetozi.ebookChat.chatroom.domain.service.ChatRoomService;
+import java.util.List;
 
 @Component
 public class WebSocketEvents {
 
-	@Autowired
-	private ChatRoomService chatRoomService;
-	
 	@EventListener
 	private void handleSessionConnected(SessionConnectEvent event) {
 		SimpMessageHeaderAccessor headers = SimpMessageHeaderAccessor.wrap(event.getMessage());
-		String toUser = headers.getNativeHeader("toUser").get(0);
-		headers.getSessionAttributes().put("toUser", toUser);
-//		ChatRoomUser joiningUser = new ChatRoomUser(event.getUser().getName());
-//
-//		chatRoomService.join(joiningUser, chatRoomService.findById(chatRoomId));
+		List<String> toUsers = headers.getNativeHeader("toUser");
+		// only put into session if set in header
+		if (toUsers != null) {
+			String toUser = toUsers.get(0);
+			headers.getSessionAttributes().put("toUser", toUser);
+		}
 	}
 
 	@EventListener

@@ -92,7 +92,7 @@ $(document).ready(function() {
 	
 	function stompSuccess(frame) {
 		enableInputMessage();
-		successMessage("Your WebSocket connection was successfully established!");
+		//successMessage("Your WebSocket connection was successfully established!");
 		
 		stompClient.subscribe('/chatroom/old.messages', oldMessages);
 		
@@ -100,7 +100,7 @@ $(document).ready(function() {
 	}
 	
 	function stompFailure(error) {
-		errorMessage("Lost connection to WebSocket! Reconnecting in 10 seconds...");
+		//errorMessage("Lost connection to WebSocket! Reconnecting in 10 seconds...");
 		disableInputMessage();
 	    setTimeout(connect, 10000);
 	}

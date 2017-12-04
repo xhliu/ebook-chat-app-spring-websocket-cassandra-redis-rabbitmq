@@ -42,6 +42,12 @@
           	<li><a href="/logout" th:text="#{menu.logout}">Logout</a></li>
           </ul>
         </li>
+        <li class="dropdown" sec:authorize="isAuthenticated()">
+          <button id="notifybtn" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">0</button>
+          <ul id="notifylist" class="dropdown-menu">
+            <li><a id="markallread" href="#">Mark All as Read</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </div>
@@ -53,7 +59,73 @@
 
 <script src="/webjars/jquery/3.1.1/jquery.min.js"></script>
 <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="/webjars/sockjs-client/1.1.2/sockjs.min.js"></script>
+<script src="/webjars/stomp-websocket/2.3.4/lib/stomp.min.js"></script>
+<script src="/webjars/noty/2.2.4/jquery.noty.packaged.min.js"></script>
+
 <script type="text/javascript" layout:fragment="script">
+</script>
+<script>
+$(document).ready(function(){
+    var btnNotify = $("#notifybtn")
+    var notifylist = $("#notifylist")
+
+    function connect() {
+        socket = new SockJS('/ws');
+        stompClient = Stomp.over(socket);
+        stompClient.connect({}, stompSuccess, stompFailure);
+    }
+
+    function stompSuccess(frame) {
+        stompClient.subscribe('/chatroom/old.pending.messages', pendingMessages);
+
+        stompClient.subscribe('/user/queue/pending.messages', pendingMessages);
+    }
+
+    function stompFailure(error) {
+        setTimeout(connect, 10000);
+    }
+
+    function disconnect() {
+        if (stompClient != null) {
+            stompClient.disconnect();
+        }
+        window.location.href = "/chat";
+    }
+
+    function pendingMessages(response) {
+        var pendingSenders = JSON.parse(response.body);
+        var btnText = pendingSenders.length + ' unread';
+        btnNotify.text(btnText);
+        var newPendingSenders = [];
+        newPendingSenders.push('<li><a id="markallread" href="#">Mark All as Read</a></li>');
+        $.each(pendingSenders, function(index, pendingSender) {
+            var href = '<li><a href="/chatroom/' + pendingSender + '">' + pendingSender + '</a></li>';
+            newPendingSenders.push(href);
+        });
+        notifylist.html(newPendingSenders);
+        var linkMarkAllRead = $("#markallread")
+        linkMarkAllRead.on("click", sendMessage);
+    }
+
+    function sendMessage() {
+        stompClient.send("/chatroom/reset.pending.messages", {}, '');
+    }
+
+    function checkEnter(e) {
+        var key = e.which;
+        if(key == 13) {
+            btnSend.click();
+            return false;
+        }
+    }
+
+    function scrollDownMessagesPanel() {
+        newMessages.animate({"scrollTop": newMessages[0].scrollHeight}, "fast");
+    }
+
+    connect();
+});
 </script>
 </body>
 </html>
