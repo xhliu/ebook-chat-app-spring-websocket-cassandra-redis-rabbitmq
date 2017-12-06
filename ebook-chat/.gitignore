@@ -28,6 +28,6 @@ dependency-reduced-pom.xml
 *.iml
 *.ipr
 *.iws
-*.idea
+.idea/
 
 README.html
